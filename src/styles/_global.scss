@@ -8,6 +8,7 @@ body {
   background-color: $color-white;
   color: $color-black;
   font-family: 'Inter', sans-serif;
+  font-size: $text-font-size;
   line-height: 1.5;
   overflow-x: hidden;
 }
@@ -26,7 +27,7 @@ a {
 }
 
 .container {
-  @include center-block(1240px);
+  @include center-block(1232px);
   padding-inline: 40px;
   position: relative;
 

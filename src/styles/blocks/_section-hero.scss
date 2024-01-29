@@ -1,0 +1,60 @@
+.section-hero {
+  background-color: $color-catskill-white;
+  padding-block: 100px;
+
+  @include tablet-down {
+    padding-block: 50px;
+  }
+
+  &__inner {
+    @include tablet-up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__media {
+    @include desktop-up {
+      flex-basis: 392px;
+      height: 406px;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    @include desktop-down {
+      width: 274px;
+    }
+  }
+
+  &__text {
+    flex-basis: 57.03%;
+
+    @include tablet-up {
+      margin-right: 80px;
+    }
+
+    @include tablet-down {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__entry {
+    @include body-text;
+  }
+
+  &__title {
+    @include title-h1;
+    margin-bottom: 15px;
+  }
+
+  &__actions {
+    margin-top: 30px;
+
+    @include tablet-down {
+      margin-top: 15px;
+    }
+  }
+}

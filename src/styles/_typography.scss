@@ -1,8 +1,9 @@
 @mixin title-h1 {
   font-size: $h1-font-size;
   font-weight: 600;
+  line-height: 1.1874;
 
-  @include desktop-down {
+  @include tablet-down {
     font-size: $h1-font-size-mobile;
   }
 }
@@ -20,5 +21,14 @@
 
   @include tablet-down {
     font-size: $h3-font-size-mobile;
+  }
+}
+
+@mixin body-text {
+  font-size: $text-font-size;
+  line-height: 1.4649;
+
+  @include tablet-down {
+    font-size: $text-font-size-small;
   }
 }
