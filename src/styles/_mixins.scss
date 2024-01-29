@@ -1,0 +1,42 @@
+// Set width and height of the same size.
+@mixin width-height($size) {
+  height: $size;
+  width: $size;
+}
+
+// Remove the default select appearance.
+@mixin remove-select-appearance() {
+  appearance: none;
+  border: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin unstyled-list() {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin center-block($width) {
+  margin-inline: auto;
+  max-width: $width;
+}
+
+@mixin image-size($size: cover) {
+  height: 100%;
+  object-fit: $size;
+  width: 100%;
+}

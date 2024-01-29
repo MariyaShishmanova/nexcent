@@ -1,0 +1,16 @@
+.btn {
+  padding: 10px 20px;
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  font-weight: 500;
+  outline: inherit;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+
+  @include mobile-down {
+  }
+}
