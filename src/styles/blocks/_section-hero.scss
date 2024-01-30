@@ -25,36 +25,40 @@
     }
 
     @include desktop-down {
-      width: 274px;
+      @include center-block(274px);
     }
   }
 
   &__text {
-    flex-basis: 57.03%;
-
     @include tablet-up {
-      margin-right: 80px;
+      flex-basis: 57.03%;
+      margin-inline-end: 80px;
     }
 
     @include tablet-down {
-      margin-bottom: 50px;
+      margin-block-end: 50px;
+      text-align: center;
     }
   }
 
   &__entry {
-    @include body-text;
+    font-size: $text-font-size-big;
+
+    @include tablet-down {
+      font-size: $text-font-size;
+    }
   }
 
   &__title {
     @include title-h1;
-    margin-bottom: 15px;
+    margin-block-end: 15px;
   }
 
   &__actions {
-    margin-top: 30px;
+    margin-block-start: 30px;
 
     @include tablet-down {
-      margin-top: 15px;
+      margin-block-start: 15px;
     }
   }
 }

@@ -1,0 +1,59 @@
+.section-boxes {
+  padding-block: 28px;
+
+  &__head {
+    @include center-block(542px);
+    text-align: center;
+    margin-block-end: 33px;
+  }
+
+  &__title {
+    margin-block-end: 5px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 298px);
+    gap: 50px;
+    justify-content: space-between;
+
+    @include desktop-down {
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  &__box {
+    &-inner {
+      box-shadow: $shadow;
+      border-radius: 8px;
+      height: 100%;
+      text-align: center;
+      padding: 20px 30px;
+    }
+
+    &-img {
+      @include center-block(64px);
+      margin-block-end: 15px;
+      height: 56px;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    &-title {
+      font-size: $h3-font-size;
+      line-height: 1.3;
+
+      @include tablet-down {
+        font-size: $text-font-size;
+      }
+    }
+
+    &-entry {
+      margin-block-start: 8px;
+      font-size: $text-font-size-small;
+    }
+  }
+}

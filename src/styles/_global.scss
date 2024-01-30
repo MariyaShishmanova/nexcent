@@ -5,11 +5,10 @@
 }
 
 body {
+  @include body-text;
   background-color: $color-white;
   color: $color-black;
   font-family: 'Inter', sans-serif;
-  font-size: $text-font-size;
-  line-height: 1.5;
   overflow-x: hidden;
 }
 
@@ -54,5 +53,11 @@ a {
     img {
       @include image-size;
     }
+  }
+}
+
+.section {
+  &__title {
+    @include title-h2;
   }
 }

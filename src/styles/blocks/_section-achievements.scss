@@ -1,0 +1,77 @@
+.section-achievements {
+  background-color: $color-catskill-white;
+  padding-block: 58px;
+  margin-block-end: 23px;
+
+  &__inner {
+    @include desktop-up {
+      display: grid;
+      grid-template-columns: 408px 540px;
+      grid-gap: 50px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__head {
+    @include desktop-down {
+      text-align: center;
+      margin-block-end: 30px;
+    }
+  }
+
+  &__title {
+    margin-block-end: 10px;
+  }
+
+  &__entry {
+    @include tablet-down {
+      font-size: $text-font-size-small;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mobile-down {
+      gap: 10px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 47px;
+      height: 47px;
+      margin-inline-end: 20px;
+
+      @include mobile-down {
+        width: 30px;
+        height: 30px;
+        margin-inline-end: 10px;
+      }
+
+      img {
+        @include image-size;
+      }
+    }
+
+    &-data {
+      p {
+        font-size: $text-font-size-small;
+      }
+    }
+
+    &-title {
+      font-size: $numbers-font-size;
+
+      @include tablet-down {
+        font-size: $text-font-size-big;
+      }
+    }
+  }
+}

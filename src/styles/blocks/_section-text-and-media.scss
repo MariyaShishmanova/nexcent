@@ -1,0 +1,56 @@
+.section-text-and-media {
+  padding-block: 28px 46px;
+
+  @include tablet-down {
+    padding-block: 50px;
+  }
+
+  &__inner {
+    @include tablet-up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__media {
+    flex-basis: 441px;
+    height: 432px;
+
+    @include tablet-down {
+      @include center-block(274px);
+      height: 331px;
+      margin-bottom: 15px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__text {
+    flex-basis: 53%;
+    margin-inline-start: 50px;
+    margin-inline-end: 47px;
+
+    @include tablet-down {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-block-end: 15px;
+  }
+
+  &__entry {
+    font-size: $text-font-size-small;
+  }
+
+  &__actions {
+    margin-block-start: 30px;
+
+    @include tablet-down {
+      margin-block-start: 15px;
+    }
+  }
+}

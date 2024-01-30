@@ -5,7 +5,7 @@
   border-radius: 4px;
   background-color: $color-apple;
   color: $color-white;
-  font-size: $text-font-size;
+  font-size: $text-font-size-big;
   font-weight: 500;
   outline: inherit;
   display: inline-block;
@@ -18,8 +18,11 @@
     background-color: $color-apple-1;
   }
 
+  @include tablet-down {
+    font-size: $text-font-size;
+  }
+
   @include mobile-down {
     display: block;
-    font-size: $text-font-size-small;
   }
 }

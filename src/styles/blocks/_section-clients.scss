@@ -1,0 +1,41 @@
+.section-clients {
+  padding-block: 39px;
+  text-align: center;
+
+  &__title {
+    margin-block-end: 8px;
+  }
+
+  &__entry {
+    margin-block-end: 40px;
+  }
+
+  &__logos-container {
+    overflow: hidden;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 47px);
+    grid-column-gap: 50px;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 47px;
+    // animation: scroll 20s linear infinite;
+
+    img {
+      @include image-size(contain);
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(1152px);
+    }
+  }
+}

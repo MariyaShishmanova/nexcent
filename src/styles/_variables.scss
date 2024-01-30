@@ -7,8 +7,9 @@
 $color-white: #ffffff;
 $color-black: #000;
 $color-catskill-white: #f5f7fa;
-$color-apple: #43A046;
-$color-apple-1: #388E3B;
+$color-apple: #43a046;
+$color-apple-1: #388e3b;
+$color-casper: #abbed1;
 
 /**
   *
@@ -17,12 +18,15 @@ $color-apple-1: #388E3B;
   */
 
 $h1-font-size: 64px;
+$h1-font-size-small: 50px;
 $h1-font-size-mobile: 30px;
-$h2-font-size: 66px;
+$h2-font-size: 36px;
 $h3-font-size: 28px;
 $h4-font-size: 20px;
-$text-font-size: 18px;
-$text-font-size-small: 16px;
+$text-font-size: 16px;
+$text-font-size-big: 18px;
+$text-font-size-small: 14px;
+$numbers-font-size: 32px;
 
 /**
   *
@@ -31,3 +35,11 @@ $text-font-size-small: 16px;
   */
 
 $trs: 0.3s;
+
+/**
+  *
+  * Shadows
+  *
+  */
+
+$shadow: 2px 2px 5px 0px rgba($color-casper, .6);
