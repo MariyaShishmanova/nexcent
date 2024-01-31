@@ -66,10 +66,15 @@
     &-title {
       margin-block-end: 20px;
       font-size: $h4-font-size;
+      transition: color $trs ease;
 
       @include desktop-down {
         font-size: $text-font-size;
         margin-block-end: 10px;
+      }
+
+      &:hover {
+        color: $color-dove-grey;
       }
     }
   }
