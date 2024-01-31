@@ -14,28 +14,14 @@
     overflow: hidden;
   }
 
-  &__logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 47px);
-    grid-column-gap: 50px;
-    justify-content: space-between;
-  }
+  // &__logos {
+  // }
 
   &__logo {
     height: 47px;
-    // animation: scroll 20s linear infinite;
 
     img {
       @include image-size(contain);
-    }
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(1152px);
     }
   }
 }
