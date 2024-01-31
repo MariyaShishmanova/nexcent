@@ -1,0 +1,14 @@
+.section-cta {
+  background-color: $color-catskill-white;
+  padding-block: 33px;
+  text-align: center;
+
+  &__inner {
+    @include center-block(886px);
+  }
+
+  &__title {
+    @include title-h1;
+    margin-block-end: 30px;
+  }
+}

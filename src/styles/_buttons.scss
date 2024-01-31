@@ -1,22 +1,14 @@
 .btn {
-  padding: 13px 30px;
   appearance: none;
   border: 0;
   border-radius: 4px;
-  background-color: $color-apple;
-  color: $color-white;
   font-size: $text-font-size-big;
   font-weight: 500;
   outline: inherit;
   display: inline-block;
   text-align: center;
-  transition: background-color $trs;
   user-select: none;
   text-decoration: none;
-
-  &:hover {
-    background-color: $color-apple-1;
-  }
 
   @include tablet-down {
     font-size: $text-font-size;
@@ -24,5 +16,59 @@
 
   @include mobile-down {
     display: block;
+  }
+
+  &-green {
+    background-color: $color-apple;
+    color: $color-white;
+    padding: 13px 30px;
+    transition: background-color $trs;
+
+    &:hover {
+      background-color: $color-apple-1;
+    }
+  }
+
+  &-arrow {
+    $self: &;
+    position: relative;
+    padding-inline: 30px 50px;
+
+    &:after {
+      content: url(/arrow-right-white.svg);
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: auto;
+      transition: transform $trs ease;
+      margin-block-start: 3px;
+    }
+
+    &:hover:after {
+      transform: translateX(5px) translateY(-50%);
+    }
+
+    &--transparent {
+      color: $color-apple;
+      font-size: $h4-font-size;
+      font-weight: 600;
+      transition: color $trs ease;
+      padding-inline: 0 37px;
+
+      @include desktop-down {
+        font-size: $text-font-size;
+      }
+
+      &#{$self}::after {
+        content: url(/arrow-right-green.svg);
+        right: 10px;
+      }
+
+      &:hover {
+        color: $color-apple-1;
+      }
+    }
   }
 }

@@ -10,6 +10,9 @@ $color-catskill-white: #f5f7fa;
 $color-apple: #43a046;
 $color-apple-1: #388e3b;
 $color-casper: #abbed1;
+$color-shamrock: #28CB8B;
+$color-regent-grey: #89939E;
+$color-outer-space: #263238;
 
 /**
   *
@@ -43,3 +46,11 @@ $trs: 0.3s;
   */
 
 $shadow: 2px 2px 5px 0px rgba($color-casper, .6);
+$shadow-1: 0px 1px 11px 0px rgba($color-casper, .6);
+
+/**
+  *
+  * Border-radius
+  *
+  */
+$border-radius: 8px;

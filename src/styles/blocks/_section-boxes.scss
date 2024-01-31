@@ -26,7 +26,8 @@
   &__box {
     &-inner {
       box-shadow: $shadow;
-      border-radius: 8px;
+      border-radius: $border-radius;
+      overflow: hidden;
       height: 100%;
       text-align: center;
       padding: 20px 30px;

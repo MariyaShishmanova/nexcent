@@ -1,0 +1,114 @@
+.section-testimonial {
+  padding-block: 25px;
+  background-color: $color-catskill-white;
+
+  &__inner {
+    @include tablet-up {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__media {
+    border-radius: $border-radius;
+    overflow: hidden;
+    height: 358px;
+    max-width: 358px;
+
+    @include tablet-down {
+      margin-inline: auto;
+      margin-block-end: 10px;
+      height: 250px;
+      max-width: 250px;
+    }
+
+    @include tablet-up {
+      flex-basis: 326px;
+      margin-inline-end: 50px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__body {
+    @include tablet-up {
+      flex-basis: 64.9205%;
+      margin-block-start: 10px;
+    }
+  }
+
+  &__entry {
+    margin-block-end: 17px;
+
+    @include tablet-down {
+      margin-block-end: 15px;
+      font-size: $text-font-size-small;
+    }
+  }
+
+  &__head {
+    margin-block-end: 28px;
+  }
+
+  &__name {
+    color: $color-apple;
+    font-size: $h4-font-size;
+    margin-block-end: 8px;
+
+    @include tablet-down {
+      font-size: $text-font-size-big;
+    }
+  }
+
+  &__company {
+    color: $color-regent-grey;
+
+    @include tablet-down {
+      font-size: $text-font-size-small;
+    }
+  }
+
+  &__foot {
+    @include desktop-up {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(6, 48px);
+    gap: 35px;
+    margin-inline-end: 40px;
+
+    @include desktop-down {
+      margin-block-end: 10px;
+    }
+
+    @include tablet-down {
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    height: 48px;
+
+    @include mobile-down {
+      height: 33px;
+      width: 33px;
+    }
+
+    img {
+      @include image-size(contain);
+    }
+  }
+
+  .btn {
+    @include mobile-down {
+      display: inline-block;
+    }
+  }
+}

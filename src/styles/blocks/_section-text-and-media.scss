@@ -20,7 +20,7 @@
     @include tablet-down {
       @include center-block(274px);
       height: 331px;
-      margin-bottom: 15px;
+      margin-block-end: 15px;
     }
 
     img {
@@ -30,8 +30,11 @@
 
   &__text {
     flex-basis: 53%;
-    margin-inline-start: 50px;
-    margin-inline-end: 47px;
+
+    @include tablet-up {
+      margin-inline-start: 50px;
+      margin-inline-end: 47px;
+    }
 
     @include tablet-down {
       text-align: center;
