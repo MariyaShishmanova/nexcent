@@ -10,6 +10,12 @@
   }
 }
 
+@mixin tablet-small-down {
+  @media screen and (max-width: 670px) {
+    @content;
+  }
+}
+
 @mixin mobile-down {
   @media screen and (max-width: 540px) {
     @content;

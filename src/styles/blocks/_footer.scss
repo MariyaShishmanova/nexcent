@@ -1,0 +1,179 @@
+.footer {
+  background-color: $color-outer-space;
+  color: $color-catskill-white;
+  padding-block: 63px 73px;
+
+  @include tablet-down {
+    padding-block: 45px;
+  }
+
+  &__logo {
+    width: 190px;
+    margin-block-end: 19px;
+
+    @include tablet-small-down {
+      width: 150px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+
+    @include desktop-up {
+      padding-inline-start: 24px;
+      padding-inline-end: 13px;
+    }
+
+    @include tablet-down {
+      grid-template-columns: repeat(2, auto);
+      justify-content: stretch;
+      gap: 30px;
+    }
+
+    @include tablet-small-down {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+
+  &__head {
+    @include tablet-small-down {
+      order: 3;
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 67px;
+    justify-content: space-between;
+
+    @include desktop-up {
+      padding-inline-start: 173px;
+    }
+
+    &-item {
+      font-size: $h4-font-size;
+
+      @include tablet-down {
+        font-size: $text-font-size;
+      }
+    }
+
+    a {
+      transition: color $trs ease;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $color-catskill-white;
+        transition: width $trs ease-out;
+      }
+
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__sub-menu {
+    font-size: $text-font-size-small;
+    margin-block-start: 20px;
+
+    li + li {
+      margin-block-start: 10px;
+    }
+  }
+
+  &__actions {
+    p {
+      font-size: $h4-font-size;
+      margin-block-end: 22px;
+
+      @include tablet-down {
+        font-size: $text-font-size;
+        margin-block-end: 15px;
+      }
+    }
+
+    @include tablet-small-down {
+      order: 2;
+    }
+  }
+
+  &__form-row {
+    position: relative;
+    width: 259px;
+
+    @include tablet-small-down {
+      width: 100%;
+    }
+
+    input {
+      background-color: $color-dove-grey;
+      border-radius: $border-radius;
+      color: $color-white;
+      width: 100%;
+      padding: 11px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 13px;
+      width: 18px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  .socials {
+    margin-block-start: 47px;
+
+    @include tablet-down {
+      margin-block-start: 15px;
+    }
+
+    a {
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  .copyright {
+    font-size: $text-font-size-small;
+
+    @include tablet-up {
+      white-space: pre-line;
+    }
+  }
+}

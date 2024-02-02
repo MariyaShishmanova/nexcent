@@ -5,13 +5,17 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Slick Slider CSS -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- jQuery first, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!-- Slick Slider JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- jQuery first, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <!-- Slick Slider JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <title>Nexcent</title>
 </head>
 
@@ -31,7 +35,9 @@
           </div>
 
           <div class="section-hero__actions">
-            <a href="#" class="btn btn-green">Register</a>
+            <a href="#" class="btn btn-green btn-hover-anim">
+              <span>Register</span>
+            </a>
           </div>
         </div>
 
@@ -177,7 +183,9 @@
           </div>
 
           <div class="section-text-and-media__actions">
-            <a href="#" class="btn btn-green">Learn more</a>
+            <a href="#" class="btn btn-green btn-hover-anim">
+              <span>Learn more</span>
+            </a>
           </div>
         </div>
       </div>
@@ -278,7 +286,9 @@
           </div>
 
           <div class="section-text-and-media__actions">
-            <a href="#" class="btn btn-green">Learn more</a>
+            <a href="#" class="btn btn-green btn-hover-anim">
+              <span>Learn more</span>
+            </a>
           </div>
         </div>
       </div>
@@ -443,9 +453,109 @@
     </div>
   </section>
 
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__head">
+          <div class="footer__logo logo">
+            <a href="#">
+              <img src="./logo.svg" alt="">
+            </a>
+          </div>
+
+          <p class="copyright">
+            Copyright &copy; 2020 Landify UI Kit.
+            All rights reserved
+          </p>
+
+          <ul class="socials">
+            <li><a href="#"><img src="./instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="./dribble.svg" alt=""></a></li>
+            <li><a href="#"><img src="./twitter.svg" alt=""></a></li>
+            <li><a href="#"><img src="./youtube.svg" alt=""></a></li>
+          </ul>
+        </div>
+
+          <div class="footer__menu-container">
+            <nav class="nav footer__nav">
+              <ul class="footer__menu">
+                <li class="footer__menu-item">
+                  <a href="#">Company</a>
+
+                  <ul class="footer__sub-menu">
+                    <li>
+                      <a href="#">About us</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Contact us</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Testimonials</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="footer__menu-item">
+                  <a href="#">Support</a>
+
+                  <ul class="footer__sub-menu">
+                    <li>
+                      <a href="#">Help center</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Terms of Service</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Legal</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Privacy policy</a>
+                    </li>
+
+                    <li>
+                      <a href="#">Status</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__actions">
+            <p>Stay up to date</p>
+
+            <div class="footer__form">
+              <form action="#" method="post">
+                <label for="email" class="sr-only">Subscribe to our newsletter:</label>
+                <div class="footer__form-row">
+                  <input type="email" id="email" name="email" placeholder="Your email address">
+                  <button type="submit" area-label="Subscribe">
+                    <img src="/send.svg" alt="">
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </footer>
+
   <div id="app"></div>
   <script type="module" src="/main.js">
-</script>
+  </script>
 </body>
 
 </html>

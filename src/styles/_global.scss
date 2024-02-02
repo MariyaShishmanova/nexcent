@@ -39,25 +39,19 @@ a {
   }
 }
 
-.logo {
-  a {
-    display: block;
-    width: 160px;
-    height: 50px;
-
-    @include desktop-down {
-      width: 100px;
-      height: 31px;
-    }
-
-    img {
-      @include image-size;
-    }
-  }
-}
-
 .section {
   &__title {
     @include title-h2;
   }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  }
