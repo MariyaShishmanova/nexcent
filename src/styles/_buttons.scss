@@ -2,7 +2,7 @@
   appearance: none;
   border: 0;
   border-radius: 4px;
-  font-size: $text-font-size-big;
+  font-size: $text-font-size;
   font-weight: 500;
   outline: inherit;
   display: inline-block;
@@ -96,6 +96,62 @@
       &:hover {
         color: $color-apple-1;
       }
+    }
+  }
+
+  &-nav {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 20px;
+
+    @include tablet-down {
+      display: block;
+    }
+
+    &.active {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:before {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+
+      span:after {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:before,
+    &:after,
+    span:after {
+      content: '';
+      background-color: $color-outer-space;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: block;
+      left: 0;
+      transition-property: opacity, visibility, transform, top;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      top: 6px;
+    }
+
+    span:after {
+      top: 12px;
     }
   }
 }
