@@ -1,4 +1,3 @@
-//  Handle the height of section-blog boxes and their elements
 const blogElements = {
   boxBody: document.querySelectorAll('.section-blog__box-body'),
   boxTitle: document.querySelectorAll('.section-blog__box-title')
@@ -16,20 +15,18 @@ function setEqualHeights(elements) {
     }
   });
 
-  elements.forEach(element => {
-    element.style.height = maxHeight + 'px';
-  });
-}
-
-// Check window width and apply the function if greater than or equal to 661px
-function applyEqualHeights() {
-  const minWidth = 661;
-
-  if (window.innerWidth >= minWidth) {
-    setEqualHeights(blogElements.boxBody);
-    setEqualHeights(blogElements.boxTitle);
+  // equalize heights only if window width is more then 670px
+  if (window.innerWidth > 670) {
+    elements.forEach(element => {
+      element.style.height = maxHeight + 'px';
+    });
   }
 }
 
-applyEqualHeights();
-window.addEventListener('resize', applyEqualHeights);
+setEqualHeights(blogElements.boxBody);
+setEqualHeights(blogElements.boxTitle);
+
+window.addEventListener('resize', () => {
+  setEqualHeights(blogElements.boxBody);
+  setEqualHeights(blogElements.boxTitle);
+});

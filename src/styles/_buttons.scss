@@ -14,7 +14,7 @@
     font-size: $text-font-size;
   }
 
-  @include mobile-down {
+  @include tablet-small-down {
     display: block;
   }
 

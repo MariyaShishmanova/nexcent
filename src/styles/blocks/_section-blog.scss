@@ -14,15 +14,23 @@
   &__box {
     margin-block-end: 60px;
 
+    @include tablet-small-down {
+      margin-block-end: 40px;
+    }
+
     &-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, 368px);
-      gap: 15px;
+      column-gap: 15px;
       justify-content: space-between;
 
       @include desktop-down {
         justify-content: center;
         grid-template-columns: repeat(auto-fit, 283px);
+      }
+
+      @include tablet-small-down {
+        grid-template-columns: repeat(1, auto);
       }
     }
 

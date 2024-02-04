@@ -107,7 +107,7 @@
   }
 
   .btn {
-    @include mobile-down {
+    @include tablet-small-down {
       display: inline-block;
     }
   }

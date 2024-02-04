@@ -14,8 +14,10 @@
     overflow: hidden;
   }
 
-  // &__logos {
-  // }
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__logo {
     height: 47px;
