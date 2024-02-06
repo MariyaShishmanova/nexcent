@@ -3,7 +3,7 @@
   color: $color-catskill-white;
   padding-block: 63px 73px;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     padding-block: 45px;
   }
 
@@ -11,7 +11,7 @@
     width: 190px;
     margin-block-end: 19px;
 
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       width: 150px;
     }
   }
@@ -22,24 +22,24 @@
     grid-template-columns: repeat(3, auto);
     justify-content: space-between;
 
-    @include desktop-up {
+    @include media(up, $desktop) {
       padding-inline-start: 24px;
       padding-inline-end: 13px;
     }
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       grid-template-columns: repeat(2, auto);
       justify-content: stretch;
       gap: 30px;
     }
 
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       grid-template-columns: repeat(1, auto);
     }
   }
 
   &__head {
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       order: 3;
     }
   }
@@ -50,14 +50,14 @@
     gap: 67px;
     justify-content: space-between;
 
-    @include desktop-up {
+    @include media(up, $desktop) {
       padding-inline-start: 173px;
     }
 
     &-item {
       font-size: $h4-font-size;
 
-      @include tablet-down {
+      @include media(down, $tablet) {
         font-size: $text-font-size;
       }
     }
@@ -99,13 +99,13 @@
       font-size: $h4-font-size;
       margin-block-end: 22px;
 
-      @include tablet-down {
+      @include media(down, $tablet) {
         font-size: $text-font-size;
         margin-block-end: 15px;
       }
     }
 
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       order: 2;
     }
   }
@@ -114,7 +114,7 @@
     position: relative;
     width: 259px;
 
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       width: 100%;
     }
 
@@ -166,7 +166,7 @@
   .socials {
     margin-block-start: 47px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-block-start: 15px;
     }
 
@@ -184,7 +184,7 @@
   .copyright {
     font-size: $text-font-size-small;
 
-    @include tablet-up {
+    @include media(up, $tablet) {
       white-space: pre-line;
     }
   }

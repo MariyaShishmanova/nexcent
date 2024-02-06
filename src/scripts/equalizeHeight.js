@@ -6,20 +6,22 @@ const blogElements = {
 function setEqualHeights(elements) {
   let maxHeight = 0;
 
-  elements.forEach(element => {
-    element.style.height = '';
-
-    const elementHeight = element.offsetHeight;
-    if (elementHeight > maxHeight) {
-      maxHeight = elementHeight;
-    }
-  });
-
-  // equalize heights only if window width is more then 670px
-  if (window.innerWidth > 670) {
+  if (elements) {
     elements.forEach(element => {
-      element.style.height = maxHeight + 'px';
+      element.style.height = '';
+
+      const elementHeight = element.offsetHeight;
+      if (elementHeight > maxHeight) {
+        maxHeight = elementHeight;
+      }
     });
+
+    // equalize heights only if window width is more then 670px
+    if (window.innerWidth > 670) {
+      elements.forEach(element => {
+        element.style.height = maxHeight + 'px';
+      });
+    }
   }
 }
 

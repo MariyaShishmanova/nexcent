@@ -13,13 +13,20 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 298px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     justify-content: space-between;
 
-    @include desktop-down {
-      justify-content: center;
+    @include media(down, $desktop) {
       gap: 30px;
+    }
+
+    @include media(down, $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(down, $mobile) {
+      grid-template-columns: 1fr
     }
   }
 
@@ -47,7 +54,7 @@
       font-size: $h3-font-size;
       line-height: 1.3;
 
-      @include tablet-down {
+      @include media(down, $tablet) {
         font-size: $text-font-size;
       }
     }

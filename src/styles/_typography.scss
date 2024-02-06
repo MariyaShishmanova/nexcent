@@ -3,11 +3,11 @@
   font-weight: 600;
   line-height: 1.1874;
 
-  @include desktop-down {
+  @include media(down, $desktop) {
     font-size: $h1-font-size-small;
   }
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     font-size: $h1-font-size-mobile;
   }
 }
@@ -16,7 +16,7 @@
   font-size: $h2-font-size;
   line-height: 1.22;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     font-size: $h4-font-size;
   }
 }
@@ -24,7 +24,7 @@
 @mixin title-h3 {
   font-size: $h3-font-size;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
   }
 }
 

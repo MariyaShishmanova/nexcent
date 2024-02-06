@@ -5,17 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Slick Slider CSS -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- jQuery first, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <!-- Slick Slider JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <title>Nexcent</title>
 </head>
 
@@ -96,44 +86,46 @@
     <section class="section section-clients">
       <div class="container">
         <div class="section-clients__inner">
-          <h1 class="section__title section-clients__title">
+          <h2 class="section__title section-clients__title">
             Our Clients
-          </h1>
+          </h2>
 
           <div class="section-clients__entry">
             <p>We have been working with some Fortune 500+ clients</p>
           </div>
 
           <div class="section-clients__logos-container">
-            <ul class="section-clients__logos logo-carousel slider">
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo1.svg" alt="">
-              </li>
+            <div class="section-clients__logos-track" data-glide-el="track">
+              <ul class="section-clients__logos">
+                <li class="section-clients__logo">
+                  <img src="./clients-logo1.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo2.svg" alt="">
-              </li>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo2.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo3.svg" alt="">
-              </li>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo3.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo4.svg" alt="">
-              </li>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo4.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo5.svg" alt="">
-              </li>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo5.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo6.svg" alt="">
-              </li>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo6.svg" alt="">
+                </li>
 
-              <li class="section-clients__logo slide">
-                <img src="./clients-logo7.svg" alt="">
-              </li>
-            </ul>
+                <li class="section-clients__logo">
+                  <img src="./clients-logo7.svg" alt="">
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -143,9 +135,9 @@
       <div class="container">
         <div class="section-boxes__inner">
           <div class="section-boxes__head">
-            <h1 class="section__title section-boxes__title">
+            <h2 class="section__title section-boxes__title">
               Manage your entire community in a single system
-            </h1>
+            </h2>
 
             <div class="section-boxes__entry">
               <p>Who is Nextcent suitable for?
@@ -219,9 +211,9 @@
           </div>
 
           <div class="section-text-and-media__text">
-            <h1 class="section__title section-text-and-media__title">
+            <h2 class="section__title section-text-and-media__title">
               The unseen of spending three years at Pixelgrade
-            </h1>
+            </h2>
 
             <div class="section-text-and-media__entry">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam
@@ -244,7 +236,7 @@
       <div class="container">
         <div class="section-achievements__inner">
           <div class="section-achievements__head">
-            <h1 class="section__title section-achievements__title">Helping a local business reinvent itself</h1>
+            <h2 class="section__title section-achievements__title">Helping a local business reinvent itself</h2>
 
             <div class="section-achievements__entry">
               <p>We reached here with our hard work and dedication</p>
@@ -320,9 +312,9 @@
           </div>
 
           <div class="section-text-and-media__text">
-            <h1 class="section__title section-text-and-media__title">
+            <h2 class="section__title section-text-and-media__title">
               How to design your site footer like we did
-            </h1>
+            </h2>
 
             <div class="section-text-and-media__entry">
               <p>Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa
@@ -412,9 +404,9 @@
       <div class="container">
         <div class="section-blog__inner">
           <div class="section-blog__head">
-            <h1 class="section__title section-blog__title">
+            <h2 class="section__title section-blog__title">
               Caring is the new marketing
-            </h1>
+            </h2>
 
             <div class="section-blog__entry">
               <p>The Nextcent blog is the best place to read about the latest membership insights, trends and more. See
@@ -494,7 +486,7 @@
     <section class="section section-cta">
       <div class="container">
         <div class="section-cta__inner">
-          <h1 class="section-cta__title">Pellentesque suscipit fringilla libero eu.</h1>
+          <h2 class="section-cta__title">Pellentesque suscipit fringilla libero eu.</h2>
 
           <div class="section-cta__actions">
             <a href="#" class="btn btn-green btn-arrow">Get a Demo</a>

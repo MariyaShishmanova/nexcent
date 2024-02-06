@@ -1,12 +1,12 @@
 .section-text-and-media {
   padding-block: 28px 46px;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     padding-block: 50px;
   }
 
   &__inner {
-    @include tablet-up {
+    @include media(up, $tablet) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,11 +15,9 @@
 
   &__media {
     flex-basis: 441px;
-    height: 432px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       @include center-block(274px);
-      height: 331px;
       margin-block-end: 15px;
     }
 
@@ -31,12 +29,12 @@
   &__text {
     flex-basis: 53%;
 
-    @include tablet-up {
+    @include media(up, $tablet) {
       margin-inline-start: 50px;
       margin-inline-end: 47px;
     }
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       text-align: center;
     }
   }
@@ -52,7 +50,7 @@
   &__actions {
     margin-block-start: 30px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-block-start: 15px;
     }
   }

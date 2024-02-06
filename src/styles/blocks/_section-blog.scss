@@ -14,7 +14,7 @@
   &__box {
     margin-block-end: 60px;
 
-    @include tablet-small-down {
+    @include media(down, $tablet-small) {
       margin-block-end: 40px;
     }
 
@@ -24,12 +24,12 @@
       column-gap: 15px;
       justify-content: space-between;
 
-      @include desktop-down {
+      @include media(down, $desktop) {
         justify-content: center;
         grid-template-columns: repeat(auto-fit, 283px);
       }
 
-      @include tablet-small-down {
+      @include media(down, $tablet-small) {
         grid-template-columns: repeat(1, auto);
       }
     }
@@ -40,7 +40,7 @@
       height: 286px;
       width: 368px;
 
-      @include desktop-down {
+      @include media(down, $desktop) {
         width: 283px;
         height: auto;
       }
@@ -66,7 +66,7 @@
       margin: -100px auto 0;
       z-index: 1;
 
-      @include tablet-down {
+      @include media(down, $tablet) {
         width: 227px;
       }
     }
@@ -76,7 +76,7 @@
       font-size: $h4-font-size;
       transition: color $trs ease;
 
-      @include desktop-down {
+      @include media(down, $desktop) {
         font-size: $text-font-size;
         margin-block-end: 10px;
       }

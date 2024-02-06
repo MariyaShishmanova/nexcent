@@ -30,11 +30,11 @@ a {
   padding-inline: 40px;
   position: relative;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     max-width: 100%;
   }
 
-  @include mobile-down {
+  @include media(down, $mobile) {
     padding-inline: 15px;
   }
 }

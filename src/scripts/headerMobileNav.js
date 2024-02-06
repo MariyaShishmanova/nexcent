@@ -21,18 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// set css variables
-function setCssVariable(variable, height) {
-  document.documentElement.style.setProperty(variable, `${height}px`);
+// set css property
+function setCssProperty(property, value, unit = 'px') {
+  if (!property || !value) {
+    throw new Error("Both property and value parameters are required.");
+  }
+  
+  document.documentElement.style.setProperty(property, `${value}${unit}`);
 }
 
-// set --viewport-height variable and update when resizing the viewport height
-let viewportHeight = window.innerHeight;
-setCssVariable('--viewport-height', viewportHeight);
+// set --viewport-height property and update when resizing the viewport height
+setCssProperty('--viewport-height', window.innerHeight);
 
 window.addEventListener('resize', () => {
-  viewportHeight = window.innerHeight;
-  setCssVariable('--viewport-height', viewportHeight);
+  setCssProperty('--viewport-height', window.innerHeight);
 
   // check if the mobile menu is open and the screen size is bigger then 960px
   if (window.innerWidth > 960 && elements.body.classList.contains(classNames.mobileNavVisible)) {
@@ -41,7 +43,7 @@ window.addEventListener('resize', () => {
   }
 });
 
-// set and update --header-height variable
+// set and update --header-height property
 
 let currentHeaderHeight = 0;
 function getAndUpdateHeaderHeight() {
@@ -50,7 +52,7 @@ function getAndUpdateHeaderHeight() {
 
     if (headerHeight !== currentHeaderHeight) {
       currentHeaderHeight = headerHeight;
-      setCssVariable('--header-height', currentHeaderHeight);
+      setCssProperty('--header-height', currentHeaderHeight);
     }
   }
 }

@@ -4,7 +4,7 @@
   margin-block-end: 23px;
 
   &__inner {
-    @include desktop-up {
+    @include media(up, $desktop) {
       display: grid;
       grid-template-columns: 408px 540px;
       grid-gap: 50px;
@@ -14,7 +14,7 @@
   }
 
   &__head {
-    @include desktop-down {
+    @include media(down, $desktop) {
       text-align: center;
       margin-block-end: 30px;
     }
@@ -25,7 +25,7 @@
   }
 
   &__entry {
-    @include tablet-down {
+    @include media(down, $tablet) {
       font-size: $text-font-size-small;
     }
   }
@@ -35,7 +35,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 
-    @include mobile-down {
+    @include media(down, $mobile) {
       gap: 10px;
     }
   }
@@ -49,7 +49,7 @@
       height: 47px;
       margin-inline-end: 20px;
 
-      @include mobile-down {
+      @include media(down, $mobile) {
         width: 30px;
         height: 30px;
         margin-inline-end: 10px;
@@ -69,7 +69,7 @@
     &-title {
       font-size: $numbers-font-size;
 
-      @include tablet-down {
+      @include media(down, $tablet) {
         font-size: $text-font-size-big;
       }
     }

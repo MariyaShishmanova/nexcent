@@ -2,12 +2,12 @@
   background-color: $color-catskill-white;
   padding-block: 100px;
 
-  @include tablet-down {
+  @include media(down, $tablet) {
     padding-block: 50px;
   }
 
   &__inner {
-    @include tablet-up {
+    @include media(up, $tablet) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,7 +15,7 @@
   }
 
   &__media {
-    @include desktop-up {
+    @include media(up, $desktop) {
       flex-basis: 392px;
       height: 406px;
 
@@ -24,18 +24,18 @@
       }
     }
 
-    @include desktop-down {
+    @include media(down, $desktop) {
       @include center-block(274px);
     }
   }
 
   &__text {
-    @include tablet-up {
+    @include media(up, $tablet) {
       flex-basis: 57.03%;
       margin-inline-end: 80px;
     }
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-block-end: 50px;
       text-align: center;
     }
@@ -44,7 +44,7 @@
   &__entry {
     font-size: $text-font-size-big;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       font-size: $text-font-size;
     }
   }
@@ -57,7 +57,7 @@
   &__actions {
     margin-block-start: 30px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-block-start: 15px;
     }
   }

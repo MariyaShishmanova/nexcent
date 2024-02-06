@@ -3,7 +3,7 @@
   background-color: $color-catskill-white;
 
   &__inner {
-    @include tablet-up {
+    @include media(up, $tablet) {
       display: flex;
       justify-content: space-between;
     }
@@ -15,14 +15,14 @@
     height: 358px;
     max-width: 358px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-inline: auto;
       margin-block-end: 10px;
       height: 250px;
       max-width: 250px;
     }
 
-    @include tablet-up {
+    @include media(up, $tablet) {
       flex-basis: 326px;
       margin-inline-end: 50px;
     }
@@ -33,7 +33,7 @@
   }
 
   &__body {
-    @include tablet-up {
+    @include media(up, $tablet) {
       flex-basis: 64.9205%;
       margin-block-start: 10px;
     }
@@ -42,7 +42,7 @@
   &__entry {
     margin-block-end: 17px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       margin-block-end: 15px;
       font-size: $text-font-size-small;
     }
@@ -57,7 +57,7 @@
     font-size: $h4-font-size;
     margin-block-end: 8px;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       font-size: $text-font-size-big;
     }
   }
@@ -65,13 +65,13 @@
   &__company {
     color: $color-regent-grey;
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       font-size: $text-font-size-small;
     }
   }
 
   &__foot {
-    @include desktop-up {
+    @include media(up, $desktop) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -80,15 +80,19 @@
 
   &__logos {
     display: grid;
-    grid-template-columns: repeat(6, 48px);
+    flex-basis: 503px;
+    grid-template-columns: repeat(auto-fill, 48px);
     gap: 35px;
-    margin-inline-end: 40px;
 
-    @include desktop-down {
+    @include media(up, $desktop) {
+      padding-inline-end: 35px;
+    }
+
+    @include media(down, $desktop) {
       margin-block-end: 10px;
     }
 
-    @include tablet-down {
+    @include media(down, $tablet) {
       gap: 10px;
     }
   }
@@ -96,7 +100,7 @@
   &__logo {
     height: 48px;
 
-    @include mobile-down {
+    @include media(down, $mobile) {
       height: 33px;
       width: 33px;
     }
@@ -107,7 +111,7 @@
   }
 
   .btn {
-    @include tablet-small-down {
+    @include media(down, $tablet) {
       display: inline-block;
     }
   }
