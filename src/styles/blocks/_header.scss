@@ -1,11 +1,18 @@
 .header {
+  box-shadow: $shadow-2;
   padding-block: 15px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: $color-white;
+  z-index: 10;
 
   &__logo {
-    width: 154px;
+    flex-basis: 154px;
 
     @include media(down, $tablet) {
-      width: 125px;
+      flex-basis: 125px;
     }
   }
 
@@ -24,11 +31,12 @@
       visibility: hidden;
       position: fixed;
       bottom: 0;
-      top: calc(var(--header-height) + 20px);
+      top: var(--header-height);
       height: calc(var(--viewport-height) - var(--header-height));
       left: 0;
       right: 0;
       padding-inline: 40px;
+      padding-block-start: 20px;
       transition-property: visibility, opacity, max-height;
       transition-duration: $trs;
       transition-timing-function: ease-in-out;
@@ -95,8 +103,14 @@
     max-height: 1500px;
   }
 
-  .page-content,
-  .footer {
-    display: none;
+  .nav {
+    height: var(--viewport-height);
+    align-content: start;
   }
+
+  .page-content, .footer {
+    display: none;
+  } 
 }
+
+

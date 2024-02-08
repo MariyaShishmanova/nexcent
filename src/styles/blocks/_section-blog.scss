@@ -1,5 +1,5 @@
 .section-blog {
-  padding: 30px 0;
+  padding-block: 30px;
   text-align: center;
 
   &__title {
@@ -20,7 +20,7 @@
 
     &-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, 368px);
+      grid-template-columns: repeat(auto-fit, 363px);
       column-gap: 15px;
       justify-content: space-between;
 
@@ -28,21 +28,14 @@
         justify-content: center;
         grid-template-columns: repeat(auto-fit, 283px);
       }
-
-      @include media(down, $tablet-small) {
-        grid-template-columns: repeat(1, auto);
-      }
     }
 
     &-media {
       border-radius: $border-radius;
       overflow: hidden;
-      height: 286px;
-      width: 368px;
 
-      @include media(down, $desktop) {
-        width: 283px;
-        height: auto;
+      @include media(up, $desktop) {
+        height: 286px;
       }
 
       img {

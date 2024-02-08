@@ -101,8 +101,7 @@
     height: 48px;
 
     @include media(down, $mobile) {
-      height: 33px;
-      width: 33px;
+      @include width-height(33px);
     }
 
     img {

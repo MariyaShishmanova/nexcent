@@ -112,13 +112,13 @@
 
   &__form-row {
     position: relative;
-    width: 259px;
+    max-width: 259px;
 
     @include media(down, $tablet-small) {
       width: 100%;
     }
 
-    input {
+    input[type=email] {
       background-color: $color-dove-grey;
       border: 1px solid rgba($color-catskill-white, 0.3);
       border-radius: $border-radius;
@@ -146,16 +146,12 @@
       }
     }
 
-    button {
+    button[type=submit] {
+      @include width-height(18px);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 13px;
-      width: 18px;
-      height: 18px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
     }
 
     img {
@@ -171,9 +167,8 @@
     }
 
     a {
+      @include width-height(32px);
       display: block;
-      height: 32px;
-      width: 32px;
     }
 
     img {

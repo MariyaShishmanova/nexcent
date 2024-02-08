@@ -1,15 +1,6 @@
-@mixin title-h1 {
-  font-size: $h1-font-size;
+@mixin title-h1($min, $max) {
+  font-size: clamp($min, 5vw, $max);
   font-weight: 600;
-  line-height: 1.1874;
-
-  @include media(down, $desktop) {
-    font-size: $h1-font-size-small;
-  }
-
-  @include media(down, $tablet) {
-    font-size: $h1-font-size-mobile;
-  }
 }
 
 @mixin title-h2 {
@@ -18,13 +9,6 @@
 
   @include media(down, $tablet) {
     font-size: $h4-font-size;
-  }
-}
-
-@mixin title-h3 {
-  font-size: $h3-font-size;
-
-  @include media(down, $tablet) {
   }
 }
 

@@ -16,8 +16,8 @@ function setEqualHeights(elements) {
       }
     });
 
-    // equalize heights only if window width is more then 670px
-    if (window.innerWidth > 670) {
+    // equalize heights only if window width is more then 660px
+    if (window.innerWidth > 660) {
       elements.forEach(element => {
         element.style.height = maxHeight + 'px';
       });

@@ -23,7 +23,6 @@ $color-tundora: #4D4D4D;
   */
 
 $h1-font-size: 64px;
-$h1-font-size-small: 50px;
 $h1-font-size-mobile: 30px;
 $h2-font-size: 36px;
 $h3-font-size: 28px;
@@ -47,8 +46,9 @@ $trs: 0.3s;
   *
   */
 
-$shadow: 2px 2px 5px 0px rgba($color-casper, .6);
-$shadow-1: 0px 1px 11px 0px rgba($color-casper, .6);
+$shadow: 2px 2px 5px 0 rgba($color-casper, .6);
+$shadow-1: 0 1px 11px 0 rgba($color-casper, .6);
+$shadow-2: 0 10px 20px rgba($color-black, .08);
 
 /**
   *
@@ -65,5 +65,5 @@ $border-radius: 8px;
 
 $desktop: 1200px;
 $tablet: 960px;
-$tablet-small: 670px;
+$tablet-small: 660px;
 $mobile: 540px;

@@ -50,7 +50,7 @@
   }
 
   &__title {
-    @include title-h1;
+    @include title-h1($h1-font-size-mobile, $h1-font-size);
     margin-block-end: 15px;
   }
 

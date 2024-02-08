@@ -7,7 +7,7 @@
     @include media(up, $desktop) {
       display: grid;
       grid-template-columns: 408px 540px;
-      grid-gap: 50px;
+      gap: 50px;
       justify-content: space-between;
       align-items: center;
     }
@@ -45,13 +45,11 @@
     align-items: center;
 
     &-img {
-      width: 47px;
-      height: 47px;
+      @include width-height(47px);
       margin-inline-end: 20px;
 
       @include media(down, $mobile) {
-        width: 30px;
-        height: 30px;
+        @include width-height(30px);
         margin-inline-end: 10px;
       }
 
