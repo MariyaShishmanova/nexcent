@@ -1,0 +1,29 @@
+.section-clients {
+  padding-block: 39px;
+  text-align: center;
+
+  &__title {
+    margin-block-end: 8px;
+  }
+
+  &__entry {
+    margin-block-end: 40px;
+  }
+
+  &__logos-container {
+    overflow: hidden;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 47px;
+
+    img {
+      @include image-size(contain);
+    }
+  }
+}

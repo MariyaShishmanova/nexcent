@@ -1,0 +1,18 @@
+@mixin title-h1($min, $max) {
+  font-size: clamp($min, 5vw, $max);
+  font-weight: 600;
+}
+
+@mixin title-h2 {
+  font-size: $h2-font-size;
+  line-height: 1.22;
+
+  @include media(down, $tablet) {
+    font-size: $h4-font-size;
+  }
+}
+
+@mixin body-text {
+  font-size: $text-font-size;
+  line-height: 1.4649;
+}

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include body-text;
+  background-color: $color-white;
+  color: $color-outer-space;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  @include unstyled-list;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include center-block(1232px);
+  padding-inline: 40px;
+  position: relative;
+
+  @include media(down, $tablet) {
+    max-width: 100%;
+  }
+
+  @include media(down, $mobile) {
+    padding-inline: 15px;
+  }
+}
+
+.section__title {
+  @include title-h2;
+}
+
+.sr-only {
+  @include width-height(1px);
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.page-content {
+  padding-block-start: var(--header-height);
+}

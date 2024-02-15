@@ -1,0 +1,57 @@
+.section-text-and-media {
+  padding-block: 28px 46px;
+
+  @include media(down, $tablet) {
+    padding-block: 50px;
+  }
+
+  &__inner {
+    @include media(up, $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__media {
+    flex-basis: 441px;
+
+    @include media(down, $tablet) {
+      @include center-block(274px);
+      margin-block-end: 15px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__text {
+    flex-basis: 53%;
+
+    @include media(up, $tablet) {
+      margin-inline-start: 50px;
+      margin-inline-end: 47px;
+    }
+
+    @include media(down, $tablet) {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-block-end: 15px;
+  }
+
+  &__entry {
+    font-size: $text-font-size-small;
+  }
+
+  &__actions {
+    margin-block-start: 30px;
+
+    @include media(down, $tablet) {
+      margin-block-start: 15px;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+.btn {
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  font-size: $text-font-size;
+  font-weight: 500;
+  outline: inherit;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+
+  @include media(down, $tablet) {
+    font-size: $text-font-size;
+  }
+
+  @include media(down, $tablet) {
+    display: block;
+  }
+
+  &-green {
+    background-color: $color-apple;
+    color: $color-white;
+    padding: 13px 30px;
+  }
+
+  &-green.btn-hover-anim {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transform: translateZ(0);
+    border: 1px solid $color-apple;
+
+    span {
+      position: relative;
+    }
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(0.7) translateY(55%);
+      background-color: $color-apple-1;
+      border-radius: 100%;
+      transition: transform $trs cubic-bezier(0, 0, 0.31, 0.99);
+    }
+
+    &:hover {
+      border-color: $color-apple-1;
+      &:before {
+        transform: scaleX(2) scaleY(1) translateY(-15%);
+      }
+    }
+  }
+
+  &-arrow {
+    $self: &;
+    position: relative;
+    padding-inline: 30px 50px;
+
+    &:after {
+      content: url(/arrow-right-white.svg);
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: auto;
+      transition: transform $trs ease;
+      margin-block-start: 3px;
+    }
+
+    &:hover:after {
+      transform: translateX(5px) translateY(-50%);
+    }
+
+    &--transparent {
+      color: $color-apple;
+      font-size: $h4-font-size;
+      font-weight: 600;
+      transition: color $trs ease;
+      padding-inline: 0 37px;
+
+      @include media(down, $desktop) {
+        font-size: $text-font-size;
+      }
+
+      &#{$self}::after {
+        content: url(/arrow-right-green.svg);
+        right: 10px;
+      }
+
+      &:hover {
+        color: $color-apple-1;
+      }
+    }
+  }
+
+  &-nav {
+    cursor: pointer;
+    position: relative;
+    display: none;
+    width: 25px;
+    height: 20px;
+
+    @include media(down, $tablet) {
+      display: block;
+    }
+
+    &.active {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:before {
+        top: 6px;
+        transform: rotate(45deg);
+      }
+
+      span:after {
+        top: 6px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:before,
+    &:after,
+    span:after {
+      content: '';
+      background-color: $color-outer-space;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      display: block;
+      left: 0;
+      transition-property: opacity, visibility, transform, top;
+      transition-duration: $trs;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      top: 6px;
+    }
+
+    span:after {
+      top: 12px;
+    }
+  }
+}

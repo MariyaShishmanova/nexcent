@@ -1,0 +1,117 @@
+.section-testimonial {
+  padding-block: 25px;
+  background-color: $color-catskill-white;
+
+  &__inner {
+    @include media(up, $tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__media {
+    border-radius: $border-radius;
+    overflow: hidden;
+    height: 358px;
+    max-width: 358px;
+
+    @include media(down, $tablet) {
+      margin-inline: auto;
+      margin-block-end: 10px;
+      height: 250px;
+      max-width: 250px;
+    }
+
+    @include media(up, $tablet) {
+      flex-basis: 326px;
+      margin-inline-end: 50px;
+    }
+
+    img {
+      @include image-size;
+    }
+  }
+
+  &__body {
+    @include media(up, $tablet) {
+      flex-basis: 64.9205%;
+      margin-block-start: 10px;
+    }
+  }
+
+  &__entry {
+    margin-block-end: 17px;
+
+    @include media(down, $tablet) {
+      margin-block-end: 15px;
+      font-size: $text-font-size-small;
+    }
+  }
+
+  &__head {
+    margin-block-end: 28px;
+  }
+
+  &__name {
+    color: $color-apple;
+    font-size: $h4-font-size;
+    margin-block-end: 8px;
+
+    @include media(down, $tablet) {
+      font-size: $text-font-size-big;
+    }
+  }
+
+  &__company {
+    color: $color-regent-grey;
+
+    @include media(down, $tablet) {
+      font-size: $text-font-size-small;
+    }
+  }
+
+  &__foot {
+    @include media(up, $desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logos {
+    display: grid;
+    flex-basis: 503px;
+    grid-template-columns: repeat(auto-fill, 48px);
+    gap: 35px;
+
+    @include media(up, $desktop) {
+      padding-inline-end: 35px;
+    }
+
+    @include media(down, $desktop) {
+      margin-block-end: 10px;
+    }
+
+    @include media(down, $tablet) {
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    height: 48px;
+
+    @include media(down, $mobile) {
+      @include width-height(33px);
+    }
+
+    img {
+      @include image-size(contain);
+    }
+  }
+
+  .btn {
+    @include media(down, $tablet) {
+      display: inline-block;
+    }
+  }
+}

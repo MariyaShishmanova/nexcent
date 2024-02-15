@@ -1,0 +1,64 @@
+.section-hero {
+  background-color: $color-catskill-white;
+  padding-block: 100px;
+
+  @include media(down, $tablet) {
+    padding-block: 50px;
+  }
+
+  &__inner {
+    @include media(up, $tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__media {
+    @include media(up, $desktop) {
+      flex-basis: 392px;
+      height: 406px;
+
+      img {
+        @include image-size;
+      }
+    }
+
+    @include media(down, $desktop) {
+      @include center-block(274px);
+    }
+  }
+
+  &__text {
+    @include media(up, $tablet) {
+      flex-basis: 57.03%;
+      margin-inline-end: 80px;
+    }
+
+    @include media(down, $tablet) {
+      margin-block-end: 50px;
+      text-align: center;
+    }
+  }
+
+  &__entry {
+    font-size: $text-font-size-big;
+
+    @include media(down, $tablet) {
+      font-size: $text-font-size;
+    }
+  }
+
+  &__title {
+    @include title-h1($h1-font-size-mobile, $h1-font-size);
+    margin-block-end: 15px;
+  }
+
+  &__actions {
+    margin-block-start: 30px;
+
+    @include media(down, $tablet) {
+      margin-block-start: 15px;
+    }
+  }
+}
