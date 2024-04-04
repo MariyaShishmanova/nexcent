@@ -1,6 +1,3 @@
-import ViteSassPlugin from 'vite-plugin-sass';
+import { defineConfig } from 'vite';
 
-export default {
-  plugins: [ViteSassPlugin(),
-  ],
-};
+export default defineConfig();
